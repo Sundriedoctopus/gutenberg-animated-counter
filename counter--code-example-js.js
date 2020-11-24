@@ -3,7 +3,7 @@ import particlesjs from 'particlesjs';
 ;(function ($, window, document, undefined) {
     $(function () {
 	    
-    // PARTICLE SYSTEM
+    	// PARTICLE SYSTEM
 		if($('#particles-js--counter').length > 0) {
 			var particlesCounter = './particlesjs--counter-config.json';
 			particlesJS.load('particles-js--counter', particlesCounter, function() {
@@ -30,13 +30,13 @@ import particlesjs from 'particlesjs';
 		}
 		
 		function isIntoView(elem) {
-		    var documentViewTop = $(window).scrollTop();
-		    var documentViewBottom = documentViewTop + $(window).height();
+		    	var documentViewTop = $(window).scrollTop();
+		    	var documentViewBottom = documentViewTop + $(window).height();
 		
-		    var elementTop = $(elem).offset().top;
-		    var elementBottom = elementTop + $(elem).height();
+		    	var elementTop = $(elem).offset().top;
+		    	var elementBottom = elementTop + $(elem).height();
 		   
-		    return elementTop < documentViewBottom ? true : false;
+		    	return elementTop < documentViewBottom && elementBottom > documentViewTop? true : false;
 		}	
 	
 		function animateValue(obj, endVal, startVal, duration) {
